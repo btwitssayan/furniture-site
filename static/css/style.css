@@ -289,9 +289,9 @@ p { margin: 0; color: var(--text-soft); }
   transform-origin: center;
 }
 .nav-toggle svg .line-mid { transition: opacity 0.2s ease; }
-.nav-toggle-checkbox:checked ~ .nav-toggle svg .line-top { transform: translateY(5px) rotate(45deg); }
+.nav-toggle-checkbox:checked ~ .nav-toggle svg .line-top { transform: translateY(5px) rotate(45deg) scale(1.1); }
 .nav-toggle-checkbox:checked ~ .nav-toggle svg .line-mid { opacity: 0; }
-.nav-toggle-checkbox:checked ~ .nav-toggle svg .line-bottom { transform: translateY(-5px) rotate(-45deg); }
+.nav-toggle-checkbox:checked ~ .nav-toggle svg .line-bottom { transform: translateY(-5px) rotate(-45deg) scale(1.1); }
 
 /* Lock background scroll while the mobile drawer is open (progressive enhancement) */
 body:has(.nav-toggle-checkbox:checked) { overflow: hidden; }
