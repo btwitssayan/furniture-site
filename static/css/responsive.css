@@ -14,10 +14,44 @@
 @media (max-width: 900px) {
   .nav-toggle {
     display: inline-flex;
-    align-items: center; justify-content: center;
-    width: 36px; height: 36px;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
     position: relative;
     z-index: 210;
+    padding: 0;
+  }
+
+  .nav-toggle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .nav-toggle svg .line-top,
+  .nav-toggle svg .line-bottom,
+  .nav-toggle svg .line-mid {
+    transform-origin: center center;
+  }
+
+  .nav-icons {
+    gap: 0.8rem;
+  }
+
+  .nav-search {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .nav-search input[type="search"] {
+    display: none;
+  }
+
+  .nav-search button {
+    padding: 0;
+    width: 22px;
+    height: 22px;
   }
 
   .navbar { flex-wrap: wrap; }
@@ -121,8 +155,34 @@
   .navbar { padding: 1rem var(--gutter); }
   .brand { font-size: 1.25rem; }
 
-  .hero { min-height: 82vh; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero {
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 0 var(--gutter);
+    text-align: center;
+  }
+
+  .hero-title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-title span { display: block; }
+
+  .hero-desc {
+    margin: 1.2rem auto 0;
+    max-width: 100%;
+  }
+
+  .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
   .section-head { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
@@ -157,6 +217,20 @@
 
 /* ---------- Small mobile ---------- */
 @media (max-width: 400px) {
+  :root { --gutter: 1rem; }
+
+  .navbar { padding: 0.8rem var(--gutter); }
+  .brand { font-size: 1.1rem; }
+
   .product-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
+
+  .hero-title { font-size: 1.8rem; }
+  .hero-desc { font-size: 0.9rem; }
+
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.2rem; }
+
+  .btn { padding: 0.8rem 1.2rem; font-size: 0.7rem; }
 }
