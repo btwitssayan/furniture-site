@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Account — WOODORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .account-layout { display:grid; grid-template-columns: 260px 1fr; gap:2.5rem; align-items:start; }
+  .account-nav a { display:block; padding:0.8rem 1rem; border-radius: var(--radius-s); font-size:0.9rem; color:var(--text); transition: background var(--transition-fast), color var(--transition-fast); }
+  .account-nav a:hover, .account-nav a.active { background: var(--beige); color: var(--wood); }
+  .order-item { display:flex; justify-content:space-between; align-items:center; padding:1.2rem 0; border-bottom:1px solid var(--line); }
+  @media (max-width: 900px){ .account-layout{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="collections.html" class="nav-link">Collections</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="wishlist.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg></a>
+      <a href="account.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c1.6-3.5 4.5-5.3 7.5-5.3s5.9 1.8 7.5 5.3"/></svg></a>
+      <a href="cart.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16l-1.5 10.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"/><path d="M8 6V5a4 4 0 0 1 8 0v1"/></svg></a>
+    </div>
+    <label for="nav-toggle" class="nav-toggle icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="line-top" d="M4 7h16"/><path class="line-mid" d="M4 12h16"/><path class="line-bottom" d="M4 17h16"/></svg>
+    </label>
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow reveal-up">Hello, Aarav</span>
+    <h1 class="section-title reveal-up d-1" style="margin-bottom:2rem;">My Account</h1>
+
+    <div class="account-layout">
+      <div class="account-nav reveal-left">
+        <a href="account.html" class="active">Overview</a>
+        <a href="order-tracking.html">My Orders</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="account.html">Address Book</a>
+        <a href="account.html">Payment Methods</a>
+        <a href="login.html">Sign Out</a>
+      </div>
+
+      <div class="reveal-right d-2">
+        <div class="order-summary" style="margin-bottom:2rem;">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:1rem;">Recent Orders</h3>
+          <div class="order-item">
+            <div><strong>#WD-48213</strong><div style="font-size:0.82rem; color:var(--text-soft);">2 items · Placed 21 Aug 2026</div></div>
+            <span class="status-pill pending">Shipped</span>
+          </div>
+          <div class="order-item">
+            <div><strong>#WD-47502</strong><div style="font-size:0.82rem; color:var(--text-soft);">1 item · Placed 3 Jul 2026</div></div>
+            <span class="status-pill paid">Delivered</span>
+          </div>
+          <div class="order-item" style="border-bottom:none;">
+            <div><strong>#WD-46110</strong><div style="font-size:0.82rem; color:var(--text-soft);">3 items · Placed 12 May 2026</div></div>
+            <span class="status-pill paid">Delivered</span>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; margin-bottom:1rem;">Account Details</h3>
+          <div class="field"><label>Full Name</label><input type="text" value="Aarav Mehta"></div>
+          <div class="field"><label>Email</label><input type="email" value="aarav.mehta@example.com"></div>
+          <button class="btn btn-outline">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand">WOOD<span>ORA</span></a><p>Furniture that defines your space — solid wood pieces crafted for the way you actually live.</p></div>
+      <div class="footer-col"><h5>Shop</h5><a href="shop.html">All Furniture</a><a href="sofas.html">Sofas</a><a href="dining.html">Dining</a><a href="collections.html">Collections</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="order-tracking.html">Track Order</a><a href="account.html">My Account</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="contact.html">Help Center</a><a href="checkout.html">Shipping</a><a href="cart.html">Returns</a><a href="contact.html">Emergency Support</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 WOODORA. All rights reserved.</span><span>Made with care, in wood and code.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

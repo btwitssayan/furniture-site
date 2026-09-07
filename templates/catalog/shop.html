@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}Shop All Furniture &mdash; WOODORA{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1600&auto=format&fit=crop" alt="Furniture showroom">
+  <div class="page-banner-content">
+    <span class="eyebrow">Full Catalogue</span>
+    <h1>Shop All Furniture</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="breadcrumb reveal-up">
+      <a href="{% url 'catalog:home' %}">Home</a><span>/</span>
+      {% if active_category %}
+        <a href="{% url 'catalog:shop' %}">Shop</a><span>/</span>
+        {% if active_subcategory %}
+          <a href="?category={{ active_category.slug }}">{{ active_category.name }}</a><span>/</span>{{ active_subcategory.name }}
+        {% else %}
+          {{ active_category.name }}
+        {% endif %}
+      {% else %}
+        Shop
+      {% endif %}
+    </div>
+
+    {# Tier 1 — category #}
+    <div class="filter-tier mt-2">
+      <span class="filter-label">Category</span>
+      <div class="filter-bar">
+        <a href="{% url 'catalog:shop' %}" class="filter-chip {% if not active_category %}active{% endif %}">All</a>
+        {% for category in categories %}
+          <a href="?category={{ category.slug }}" class="filter-chip {% if active_category.pk == category.pk %}active{% endif %}">{{ category.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    {# Tier 2 — subcategory, only once a category is chosen #}
+    {% if active_category and subcategories %}
+      <div class="filter-tier filter-tier-sub">
+        <span class="filter-label">Refine {{ active_category.name }}</span>
+        <div class="filter-bar">
+          <a href="?category={{ active_category.slug }}"
+             class="filter-chip chip-sub {% if not active_subcategory %}active{% endif %}">All {{ active_category.name }}</a>
+          {% for subcategory in subcategories %}
+            <a href="?category={{ active_category.slug }}&amp;sub={{ subcategory.slug }}"
+               class="filter-chip chip-sub {% if active_subcategory.pk == subcategory.pk %}active{% endif %}">
+              {{ subcategory.name }} <span class="chip-count">{{ subcategory.product_count }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    {# Result summary #}
+    <div class="filter-summary">
+      <span>
+        {{ product_count }} product{{ product_count|pluralize }}
+        {% if active_subcategory %}
+          in {{ active_category.name }} &middot; {{ active_subcategory.name }}
+        {% elif active_category %}
+          in {{ active_category.name }}
+        {% endif %}
+      </span>
+      {% if active_category %}
+        <a href="{% url 'catalog:shop' %}" class="filter-clear">Clear filters &times;</a>
+      {% endif %}
+    </div>
+
+    <div class="product-grid">
+      {% for product in products %}
+        {% include "catalog/_product_card.html" with delay=forloop.counter0|stagger %}
+      {% empty %}
+        <p class="lede">No products found{% if active_category %} in {{ active_category.name }}{% endif %}.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Collections &mdash; WOODORA{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+  <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1600&auto=format&fit=crop" alt="Curated collection interior">
+  <div class="page-banner-content">
+    <span class="eyebrow">Curated Edits</span>
+    <h1>Collections</h1>
+  </div>
+</section>
+
+{% for collection in collections %}
+  {% if forloop.counter|divisibleby:2 %}
+    <section class="section section-alt">
+      <div class="container">
+        <div class="editorial reverse">
+          <div class="editorial-media image-reveal">
+            <img src="{{ collection.image_url }}" alt="{{ collection.name }}">
+          </div>
+          <div class="reveal-left d-2">
+            <span class="eyebrow">{{ forloop.counter|stringformat:"02d" }} &mdash; {{ collection.name }}</span>
+            <h2 class="editorial-title">{{ collection.name }}</h2>
+            <div class="editorial-line"></div>
+            <p class="lede">{{ collection.description }}</p>
+            <a href="{% url 'catalog:collection_detail' collection.slug %}" class="btn btn-primary mt-2">Explore Collection <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% else %}
+    <section class="section">
+      <div class="container">
+        <div class="editorial">
+          <div class="editorial-media image-reveal">
+            <img src="{{ collection.image_url }}" alt="{{ collection.name }}">
+          </div>
+          <div class="reveal-right d-2">
+            <span class="eyebrow">{{ forloop.counter|stringformat:"02d" }} &mdash; {{ collection.name }}</span>
+            <h2 class="editorial-title">{{ collection.name }}</h2>
+            <div class="editorial-line"></div>
+            <p class="lede">{{ collection.description }}</p>
+            <a href="{% url 'catalog:collection_detail' collection.slug %}" class="btn btn-primary mt-2">Explore Collection <span class="arrow">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% empty %}
+  <section class="section">
+    <div class="container"><p class="lede">No collections published yet.</p></div>
+  </section>
+{% endfor %}
+{% endblock %}

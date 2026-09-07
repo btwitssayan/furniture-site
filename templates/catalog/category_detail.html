@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}{{ category.name }} &mdash; WOODORA{% endblock %}
+
+{% block content %}
+<section class="page-banner" style="min-height:44vh;">
+  <img src="{{ category.image_url }}" alt="{{ category.name }} category">
+  <div class="page-banner-content">
+    <span class="eyebrow">Category</span>
+    <h1>{{ category.name }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="breadcrumb reveal-up">
+      <a href="{% url 'catalog:home' %}">Home</a><span>/</span>
+      <a href="{% url 'catalog:shop' %}">Shop</a><span>/</span>{{ category.name }}
+    </div>
+
+    {% if subcategories %}
+      <div class="filter-tier filter-tier-sub mt-2">
+        <span class="filter-label">Refine {{ category.name }}</span>
+        <div class="filter-bar">
+          <a href="{% url 'catalog:category_detail' category.slug %}"
+             class="filter-chip chip-sub {% if not active_subcategory %}active{% endif %}">All {{ category.name }}</a>
+          {% for subcategory in subcategories %}
+            <a href="?sub={{ subcategory.slug }}"
+               class="filter-chip chip-sub {% if active_subcategory.pk == subcategory.pk %}active{% endif %}">
+              {{ subcategory.name }} <span class="chip-count">{{ subcategory.product_count }}</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="filter-summary">
+      <span>
+        {{ product_count }} product{{ product_count|pluralize }} in {{ category.name }}{% if active_subcategory %} &middot; {{ active_subcategory.name }}{% endif %}
+      </span>
+      <a href="{% url 'catalog:shop' %}" class="filter-clear">Browse all furniture &rarr;</a>
+    </div>
+
+    <div class="product-grid">
+      {% for product in products %}
+        {% include "catalog/_product_card.html" with delay=forloop.counter0|stagger %}
+      {% empty %}
+        <p class="lede">Nothing in this category yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

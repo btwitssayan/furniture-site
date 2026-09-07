@@ -1,0 +1,2186 @@
+[
+ {
+  "model": "catalog.category",
+  "pk": 1,
+  "fields": {
+   "name": "Sofas",
+   "slug": "sofas",
+   "image_url": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.740497"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 2,
+  "fields": {
+   "name": "Beds",
+   "slug": "beds",
+   "image_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.746460"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 3,
+  "fields": {
+   "name": "Dining",
+   "slug": "dining",
+   "image_url": "https://images.unsplash.com/photo-1617104551722-3b2d51366400?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.748606"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 4,
+  "fields": {
+   "name": "Chairs",
+   "slug": "chairs",
+   "image_url": "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.750321"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 5,
+  "fields": {
+   "name": "Tables",
+   "slug": "tables",
+   "image_url": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.752071"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 6,
+  "fields": {
+   "name": "Wardrobes",
+   "slug": "wardrobes",
+   "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.753884"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 7,
+  "fields": {
+   "name": "Office",
+   "slug": "office",
+   "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.755873"
+  }
+ },
+ {
+  "model": "catalog.category",
+  "pk": 8,
+  "fields": {
+   "name": "Decor",
+   "slug": "decor",
+   "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800&auto=format&fit=crop",
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.757548"
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 1,
+  "fields": {
+   "category": 1,
+   "name": "3-Seater",
+   "slug": "3-seater",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 2,
+  "fields": {
+   "category": 1,
+   "name": "2-Seater",
+   "slug": "2-seater",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 3,
+  "fields": {
+   "category": 1,
+   "name": "Sectional",
+   "slug": "sectional",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 4,
+  "fields": {
+   "category": 1,
+   "name": "Recliner",
+   "slug": "recliner",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 5,
+  "fields": {
+   "category": 2,
+   "name": "King",
+   "slug": "king",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 6,
+  "fields": {
+   "category": 2,
+   "name": "Queen",
+   "slug": "queen",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 7,
+  "fields": {
+   "category": 2,
+   "name": "Platform",
+   "slug": "platform",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 8,
+  "fields": {
+   "category": 2,
+   "name": "Storage",
+   "slug": "storage",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 9,
+  "fields": {
+   "category": 3,
+   "name": "Dining Tables",
+   "slug": "dining-tables",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 10,
+  "fields": {
+   "category": 3,
+   "name": "Dining Chairs",
+   "slug": "dining-chairs",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 11,
+  "fields": {
+   "category": 3,
+   "name": "Sideboards",
+   "slug": "sideboards",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 12,
+  "fields": {
+   "category": 4,
+   "name": "Lounge",
+   "slug": "lounge",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 13,
+  "fields": {
+   "category": 4,
+   "name": "Accent",
+   "slug": "accent",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 14,
+  "fields": {
+   "category": 4,
+   "name": "Dining",
+   "slug": "dining",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 15,
+  "fields": {
+   "category": 5,
+   "name": "Coffee Tables",
+   "slug": "coffee-tables",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 16,
+  "fields": {
+   "category": 5,
+   "name": "Side Tables",
+   "slug": "side-tables",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 17,
+  "fields": {
+   "category": 5,
+   "name": "Console",
+   "slug": "console",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 18,
+  "fields": {
+   "category": 6,
+   "name": "Two-Door",
+   "slug": "two-door",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 19,
+  "fields": {
+   "category": 6,
+   "name": "Three-Door",
+   "slug": "three-door",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 20,
+  "fields": {
+   "category": 6,
+   "name": "Sliding",
+   "slug": "sliding",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 21,
+  "fields": {
+   "category": 7,
+   "name": "Desks",
+   "slug": "desks",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 22,
+  "fields": {
+   "category": 7,
+   "name": "Office Chairs",
+   "slug": "office-chairs",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 23,
+  "fields": {
+   "category": 7,
+   "name": "Storage",
+   "slug": "storage",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 25,
+  "fields": {
+   "category": 8,
+   "name": "Lighting",
+   "slug": "lighting",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 26,
+  "fields": {
+   "category": 8,
+   "name": "Rugs",
+   "slug": "rugs",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.subcategory",
+  "pk": 27,
+  "fields": {
+   "category": 8,
+   "name": "Mirrors",
+   "slug": "mirrors",
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 1,
+  "fields": {
+   "subcategory": 12,
+   "name": "Nordic Lounge Chair",
+   "slug": "nordic-lounge-chair",
+   "description": "Solid ash-wood frame with a hand-upholstered boucle seat. The Nordic Lounge Chair is built on a gently curved silhouette that supports the lower back through long reading sessions - finished by hand in our Pune workshop.",
+   "price": 14999,
+   "compare_at_price": 19999,
+   "warranty_years": 5,
+   "rating": 4.67,
+   "review_count": 3,
+   "is_featured": true,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.761266",
+   "updated_at": "2026-09-07 09:49:40.200323"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 2,
+  "fields": {
+   "subcategory": 1,
+   "name": "Oakwood Three-Seater Sofa",
+   "slug": "oakwood-three-seater-sofa",
+   "description": "A generous three-seater on a solid oak frame, with feather-blend cushions that keep their shape season after season.",
+   "price": 58499,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 5,
+   "review_count": 2,
+   "is_featured": true,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.765510",
+   "updated_at": "2026-09-07 09:49:40.204919"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 3,
+  "fields": {
+   "subcategory": 9,
+   "name": "Solstice Dining Table",
+   "slug": "solstice-dining-table",
+   "description": "Seats six comfortably on a single-slab top with tapered legs and a hand-rubbed oil finish.",
+   "price": 37800,
+   "compare_at_price": 42000,
+   "warranty_years": 7,
+   "rating": 4.5,
+   "review_count": 2,
+   "is_featured": true,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.768257",
+   "updated_at": "2026-09-07 09:49:40.207455"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 4,
+  "fields": {
+   "subcategory": 7,
+   "name": "Alder Platform Bed",
+   "slug": "alder-platform-bed",
+   "description": "A low-profile platform bed with an upholstered headboard and a slatted base that needs no box spring.",
+   "price": 64999,
+   "compare_at_price": null,
+   "warranty_years": 10,
+   "rating": 5,
+   "review_count": 1,
+   "is_featured": true,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.770580",
+   "updated_at": "2026-09-07 09:49:40.209796"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 5,
+  "fields": {
+   "subcategory": 13,
+   "name": "Wishbone Accent Chair",
+   "slug": "wishbone-accent-chair",
+   "description": "A woven-cord seat on a steam-bent frame - light enough to move, sturdy enough to last.",
+   "price": 11499,
+   "compare_at_price": null,
+   "warranty_years": 3,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.772719",
+   "updated_at": "2026-09-07 09:49:40.212004"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 6,
+  "fields": {
+   "subcategory": 19,
+   "name": "Camden Three-Door Wardrobe",
+   "slug": "camden-three-door-wardrobe",
+   "description": "Three full-height doors, an internal drawer bank and soft-close hinges throughout.",
+   "price": 49999,
+   "compare_at_price": null,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.774712",
+   "updated_at": "2026-09-07 09:49:40.214029"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 7,
+  "fields": {
+   "subcategory": 21,
+   "name": "Foundry Writing Desk",
+   "slug": "foundry-writing-desk",
+   "description": "A compact writing desk with a cable channel and two shallow drawers sized for papers.",
+   "price": 22750,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.776766",
+   "updated_at": "2026-09-07 09:49:40.216017"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 8,
+  "fields": {
+   "subcategory": 15,
+   "name": "Ember Round Coffee Table",
+   "slug": "ember-round-coffee-table",
+   "description": "A round-top coffee table on a sculpted pedestal base, finished with a matte hard-wax oil.",
+   "price": 13599,
+   "compare_at_price": 15999,
+   "warranty_years": 5,
+   "rating": 5,
+   "review_count": 1,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.778750",
+   "updated_at": "2026-09-07 09:49:40.218060"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 9,
+  "fields": {
+   "subcategory": 3,
+   "name": "Haven L-Shaped Sectional",
+   "slug": "haven-l-shaped-sectional",
+   "description": "A deep-seated corner sectional with a reversible chaise, so it fits either side of a room.",
+   "price": 73600,
+   "compare_at_price": 92000,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.780869",
+   "updated_at": "2026-09-07 09:49:40.221152"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 10,
+  "fields": {
+   "subcategory": 2,
+   "name": "Linden Two-Seater Sofa",
+   "slug": "linden-two-seater-sofa",
+   "description": "A tidy two-seater for smaller rooms, on tapered solid-wood legs.",
+   "price": 41250,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.782932",
+   "updated_at": "2026-09-07 09:49:40.223220"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+   "subcategory": 4,
+   "name": "Recline Wood-Frame Recliner",
+   "slug": "recline-wood-frame-recliner",
+   "description": "A manual recliner built into a solid wood frame - no bulky mechanism on show.",
+   "price": 67999,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.786002",
+   "updated_at": "2026-09-07 09:49:40.225223"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+   "subcategory": 5,
+   "name": "Rosewood King Bed",
+   "slug": "rosewood-king-bed",
+   "description": "A full king frame in solid rosewood, with a tall panelled headboard and mortise-and-tenon joinery throughout.",
+   "price": 78999,
+   "compare_at_price": 89999,
+   "warranty_years": 10,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.227365",
+   "updated_at": "2026-09-07 09:49:40.227376"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+   "subcategory": 6,
+   "name": "Meadow Queen Bed",
+   "slug": "meadow-queen-bed",
+   "description": "A softly rounded queen frame with an upholstered headboard, sized for smaller rooms.",
+   "price": 52999,
+   "compare_at_price": null,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.229613",
+   "updated_at": "2026-09-07 09:49:40.229622"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+   "subcategory": 8,
+   "name": "Vault Storage Bed",
+   "slug": "vault-storage-bed",
+   "description": "Four deep drawers built into the base, on full-extension runners rated to 40kg each.",
+   "price": 69999,
+   "compare_at_price": 79999,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.231674",
+   "updated_at": "2026-09-07 09:49:40.231683"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+   "subcategory": 10,
+   "name": "Nord Dining Chair",
+   "slug": "nord-dining-chair",
+   "description": "A stackable solid-ash dining chair with a contoured seat. Sold individually.",
+   "price": 8499,
+   "compare_at_price": null,
+   "warranty_years": 3,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.233824",
+   "updated_at": "2026-09-07 09:49:40.233834"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+   "subcategory": 11,
+   "name": "Larch Sideboard",
+   "slug": "larch-sideboard",
+   "description": "Two cupboards and a central drawer bank, sized to sit beneath a wall-hung mirror.",
+   "price": 34500,
+   "compare_at_price": null,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.235862",
+   "updated_at": "2026-09-07 09:49:40.235870"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+   "subcategory": 14,
+   "name": "Spindle Dining Chair",
+   "slug": "spindle-dining-chair",
+   "description": "A turned-spindle back on a solid seat - the classic kitchen chair, properly made.",
+   "price": 9250,
+   "compare_at_price": null,
+   "warranty_years": 3,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.237938",
+   "updated_at": "2026-09-07 09:49:40.237947"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 18,
+  "fields": {
+   "subcategory": 16,
+   "name": "Pebble Side Table",
+   "slug": "pebble-side-table",
+   "description": "A small rounded side table that tucks under the arm of a sofa.",
+   "price": 6999,
+   "compare_at_price": 8499,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.239934",
+   "updated_at": "2026-09-07 09:49:40.239943"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 19,
+  "fields": {
+   "subcategory": 17,
+   "name": "Halden Console Table",
+   "slug": "halden-console-table",
+   "description": "A narrow hallway console with a lower shelf, only 32cm deep.",
+   "price": 18999,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.241904",
+   "updated_at": "2026-09-07 09:49:40.241912"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 20,
+  "fields": {
+   "subcategory": 18,
+   "name": "Aspen Two-Door Wardrobe",
+   "slug": "aspen-two-door-wardrobe",
+   "description": "A two-door wardrobe with a full-width hanging rail and one adjustable shelf.",
+   "price": 36999,
+   "compare_at_price": null,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.243897",
+   "updated_at": "2026-09-07 09:49:40.243906"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 21,
+  "fields": {
+   "subcategory": 20,
+   "name": "Glide Sliding Wardrobe",
+   "slug": "glide-sliding-wardrobe",
+   "description": "Soft-close sliding doors on a top-hung track, so nothing catches on the carpet.",
+   "price": 58999,
+   "compare_at_price": 64999,
+   "warranty_years": 7,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.245883",
+   "updated_at": "2026-09-07 09:49:40.245891"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 22,
+  "fields": {
+   "subcategory": 22,
+   "name": "Studio Task Chair",
+   "slug": "studio-task-chair",
+   "description": "A height-adjustable task chair on a wooden shell, with a breathable woven back.",
+   "price": 16499,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.247848",
+   "updated_at": "2026-09-07 09:49:40.247857"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 23,
+  "fields": {
+   "subcategory": 23,
+   "name": "Archive Filing Cabinet",
+   "slug": "archive-filing-cabinet",
+   "description": "Three lockable drawers sized for A4 suspension files, on a solid oak carcass.",
+   "price": 14250,
+   "compare_at_price": null,
+   "warranty_years": 5,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.250035",
+   "updated_at": "2026-09-07 09:49:40.250046"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 24,
+  "fields": {
+   "subcategory": 25,
+   "name": "Halo Arc Floor Lamp",
+   "slug": "halo-arc-floor-lamp",
+   "description": "An arc floor lamp on a weighted wooden base, reaching over a sofa or reading chair.",
+   "price": 12999,
+   "compare_at_price": 15499,
+   "warranty_years": 2,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.252272",
+   "updated_at": "2026-09-07 09:49:40.252282"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 25,
+  "fields": {
+   "subcategory": 26,
+   "name": "Dune Handwoven Rug",
+   "slug": "dune-handwoven-rug",
+   "description": "A flatweave wool rug, handwoven in Bhadohi. 170 x 240cm.",
+   "price": 18750,
+   "compare_at_price": null,
+   "warranty_years": 3,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.254686",
+   "updated_at": "2026-09-07 09:49:40.254698"
+  }
+ },
+ {
+  "model": "catalog.product",
+  "pk": 26,
+  "fields": {
+   "subcategory": 27,
+   "name": "Arch Wall Mirror",
+   "slug": "arch-wall-mirror",
+   "description": "An arched mirror in a solid wood frame, with concealed French-cleat mounting.",
+   "price": 9999,
+   "compare_at_price": null,
+   "warranty_years": 3,
+   "rating": 0,
+   "review_count": 0,
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 09:49:40.256727",
+   "updated_at": "2026-09-07 09:49:40.256737"
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 47,
+  "fields": {
+   "product": 1,
+   "image_url": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Nordic Lounge Chair",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 48,
+  "fields": {
+   "product": 1,
+   "image_url": "https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Nordic Lounge Chair detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 49,
+  "fields": {
+   "product": 1,
+   "image_url": "https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Nordic Lounge Chair detail 2",
+   "sort_order": 2,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 50,
+  "fields": {
+   "product": 2,
+   "image_url": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Oakwood Three-Seater Sofa",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 51,
+  "fields": {
+   "product": 2,
+   "image_url": "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Oakwood Three-Seater Sofa detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 52,
+  "fields": {
+   "product": 3,
+   "image_url": "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Solstice Dining Table",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 53,
+  "fields": {
+   "product": 3,
+   "image_url": "https://images.unsplash.com/photo-1617806118233-18e1de247200?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Solstice Dining Table detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 54,
+  "fields": {
+   "product": 4,
+   "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Alder Platform Bed",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 55,
+  "fields": {
+   "product": 4,
+   "image_url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Alder Platform Bed detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 56,
+  "fields": {
+   "product": 5,
+   "image_url": "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Wishbone Accent Chair",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 57,
+  "fields": {
+   "product": 5,
+   "image_url": "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Wishbone Accent Chair detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 58,
+  "fields": {
+   "product": 6,
+   "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Camden Three-Door Wardrobe",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 59,
+  "fields": {
+   "product": 6,
+   "image_url": "https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Camden Three-Door Wardrobe detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 60,
+  "fields": {
+   "product": 7,
+   "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Foundry Writing Desk",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 61,
+  "fields": {
+   "product": 7,
+   "image_url": "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Foundry Writing Desk detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 62,
+  "fields": {
+   "product": 8,
+   "image_url": "https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Ember Round Coffee Table",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 63,
+  "fields": {
+   "product": 8,
+   "image_url": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Ember Round Coffee Table detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 64,
+  "fields": {
+   "product": 9,
+   "image_url": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Haven L-Shaped Sectional",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 65,
+  "fields": {
+   "product": 9,
+   "image_url": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Haven L-Shaped Sectional detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 66,
+  "fields": {
+   "product": 10,
+   "image_url": "https://images.unsplash.com/photo-1550254478-ead40cc54513?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Linden Two-Seater Sofa",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 67,
+  "fields": {
+   "product": 10,
+   "image_url": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Linden Two-Seater Sofa detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 68,
+  "fields": {
+   "product": 11,
+   "image_url": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Recline Wood-Frame Recliner",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 69,
+  "fields": {
+   "product": 11,
+   "image_url": "https://images.unsplash.com/photo-1567016376408-0226e4d0c1ea?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Recline Wood-Frame Recliner detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 70,
+  "fields": {
+   "product": 12,
+   "image_url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Rosewood King Bed",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 71,
+  "fields": {
+   "product": 12,
+   "image_url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Rosewood King Bed detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 72,
+  "fields": {
+   "product": 13,
+   "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Meadow Queen Bed",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 73,
+  "fields": {
+   "product": 13,
+   "image_url": "https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Meadow Queen Bed detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 74,
+  "fields": {
+   "product": 14,
+   "image_url": "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Vault Storage Bed",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 75,
+  "fields": {
+   "product": 14,
+   "image_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Vault Storage Bed detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 76,
+  "fields": {
+   "product": 15,
+   "image_url": "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Nord Dining Chair",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 77,
+  "fields": {
+   "product": 15,
+   "image_url": "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Nord Dining Chair detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 78,
+  "fields": {
+   "product": 16,
+   "image_url": "https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Larch Sideboard",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 79,
+  "fields": {
+   "product": 16,
+   "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Larch Sideboard detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 80,
+  "fields": {
+   "product": 17,
+   "image_url": "https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Spindle Dining Chair",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 81,
+  "fields": {
+   "product": 17,
+   "image_url": "https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Spindle Dining Chair detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 82,
+  "fields": {
+   "product": 18,
+   "image_url": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Pebble Side Table",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 83,
+  "fields": {
+   "product": 18,
+   "image_url": "https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Pebble Side Table detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 84,
+  "fields": {
+   "product": 19,
+   "image_url": "https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Halden Console Table",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 85,
+  "fields": {
+   "product": 19,
+   "image_url": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Halden Console Table detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 86,
+  "fields": {
+   "product": 20,
+   "image_url": "https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Aspen Two-Door Wardrobe",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 87,
+  "fields": {
+   "product": 20,
+   "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Aspen Two-Door Wardrobe detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 88,
+  "fields": {
+   "product": 21,
+   "image_url": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Glide Sliding Wardrobe",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 89,
+  "fields": {
+   "product": 21,
+   "image_url": "https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Glide Sliding Wardrobe detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 90,
+  "fields": {
+   "product": 22,
+   "image_url": "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Studio Task Chair",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 91,
+  "fields": {
+   "product": 22,
+   "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Studio Task Chair detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 92,
+  "fields": {
+   "product": 23,
+   "image_url": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Archive Filing Cabinet",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 93,
+  "fields": {
+   "product": 23,
+   "image_url": "https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Archive Filing Cabinet detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 94,
+  "fields": {
+   "product": 24,
+   "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Halo Arc Floor Lamp",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 95,
+  "fields": {
+   "product": 24,
+   "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Halo Arc Floor Lamp detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 96,
+  "fields": {
+   "product": 25,
+   "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Dune Handwoven Rug",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 97,
+  "fields": {
+   "product": 25,
+   "image_url": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Dune Handwoven Rug detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 98,
+  "fields": {
+   "product": 26,
+   "image_url": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Arch Wall Mirror",
+   "sort_order": 0,
+   "is_primary": true
+  }
+ },
+ {
+  "model": "catalog.productimage",
+  "pk": 99,
+  "fields": {
+   "product": 26,
+   "image_url": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=700&auto=format&fit=crop",
+   "alt_text": "Arch Wall Mirror detail 1",
+   "sort_order": 1,
+   "is_primary": false
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 49,
+  "fields": {
+   "product": 1,
+   "name": "Natural Ash",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 50,
+  "fields": {
+   "product": 1,
+   "name": "Walnut Stain",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 51,
+  "fields": {
+   "product": 1,
+   "name": "Ebony Black",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 52,
+  "fields": {
+   "product": 2,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 53,
+  "fields": {
+   "product": 2,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 54,
+  "fields": {
+   "product": 2,
+   "name": "Charcoal",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 55,
+  "fields": {
+   "product": 3,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 56,
+  "fields": {
+   "product": 3,
+   "name": "Smoked Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 57,
+  "fields": {
+   "product": 4,
+   "name": "Natural Alder",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 58,
+  "fields": {
+   "product": 4,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 59,
+  "fields": {
+   "product": 5,
+   "name": "Natural Ash",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 60,
+  "fields": {
+   "product": 5,
+   "name": "Black Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 61,
+  "fields": {
+   "product": 6,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 62,
+  "fields": {
+   "product": 6,
+   "name": "Ebony",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 63,
+  "fields": {
+   "product": 7,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 64,
+  "fields": {
+   "product": 7,
+   "name": "Blackened Steel",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 65,
+  "fields": {
+   "product": 8,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 66,
+  "fields": {
+   "product": 8,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 67,
+  "fields": {
+   "product": 9,
+   "name": "Oatmeal Linen",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 68,
+  "fields": {
+   "product": 9,
+   "name": "Slate Grey",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 69,
+  "fields": {
+   "product": 10,
+   "name": "Oatmeal Linen",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 70,
+  "fields": {
+   "product": 10,
+   "name": "Forest Green",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 71,
+  "fields": {
+   "product": 11,
+   "name": "Tan Leather",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 72,
+  "fields": {
+   "product": 11,
+   "name": "Espresso",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 73,
+  "fields": {
+   "product": 12,
+   "name": "Rosewood",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 74,
+  "fields": {
+   "product": 12,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 75,
+  "fields": {
+   "product": 13,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 76,
+  "fields": {
+   "product": 13,
+   "name": "Sage",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 77,
+  "fields": {
+   "product": 14,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 78,
+  "fields": {
+   "product": 14,
+   "name": "Charcoal",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 79,
+  "fields": {
+   "product": 15,
+   "name": "Natural Ash",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 80,
+  "fields": {
+   "product": 15,
+   "name": "Walnut Stain",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 81,
+  "fields": {
+   "product": 16,
+   "name": "Natural Larch",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 82,
+  "fields": {
+   "product": 16,
+   "name": "Smoked Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 83,
+  "fields": {
+   "product": 17,
+   "name": "Natural Ash",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 84,
+  "fields": {
+   "product": 17,
+   "name": "Ebony Black",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 85,
+  "fields": {
+   "product": 18,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 86,
+  "fields": {
+   "product": 18,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 87,
+  "fields": {
+   "product": 19,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 88,
+  "fields": {
+   "product": 19,
+   "name": "Blackened Steel",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 89,
+  "fields": {
+   "product": 20,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 90,
+  "fields": {
+   "product": 20,
+   "name": "Ivory",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 91,
+  "fields": {
+   "product": 21,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 92,
+  "fields": {
+   "product": 21,
+   "name": "Mirrored",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 93,
+  "fields": {
+   "product": 22,
+   "name": "Natural Ash",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 94,
+  "fields": {
+   "product": 22,
+   "name": "Charcoal",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 95,
+  "fields": {
+   "product": 23,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 96,
+  "fields": {
+   "product": 23,
+   "name": "Blackened Steel",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 97,
+  "fields": {
+   "product": 24,
+   "name": "Brass",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 98,
+  "fields": {
+   "product": 24,
+   "name": "Matte Black",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 99,
+  "fields": {
+   "product": 25,
+   "name": "Sand",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 100,
+  "fields": {
+   "product": 25,
+   "name": "Charcoal",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 101,
+  "fields": {
+   "product": 26,
+   "name": "Natural Oak",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productvariant",
+  "pk": 102,
+  "fields": {
+   "product": 26,
+   "name": "Walnut",
+   "price": null,
+   "is_active": true
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 20,
+  "fields": {
+   "product": 1,
+   "rating": 5,
+   "review_text": "Exactly as pictured. The ash grain is beautiful and it is genuinely comfortable.",
+   "created_at": "2026-09-07 09:49:40.203449"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 21,
+  "fields": {
+   "product": 1,
+   "rating": 5,
+   "review_text": "Took ten minutes to assemble and has not creaked once in six months.",
+   "created_at": "2026-09-07 09:49:40.203626"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 22,
+  "fields": {
+   "product": 1,
+   "rating": 4,
+   "review_text": "Lovely chair, though the walnut finish is a touch darker than the photos.",
+   "created_at": "2026-09-07 09:49:40.203766"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 23,
+  "fields": {
+   "product": 2,
+   "rating": 5,
+   "review_text": "Worth every rupee. The cushions have held their shape perfectly.",
+   "created_at": "2026-09-07 09:49:40.206400"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 24,
+  "fields": {
+   "product": 2,
+   "rating": 5,
+   "review_text": "Delivery team assembled it in the room. Excellent service.",
+   "created_at": "2026-09-07 09:49:40.206524"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 25,
+  "fields": {
+   "product": 3,
+   "rating": 4,
+   "review_text": "Solid table, seats six easily. Shipping took a little longer than promised.",
+   "created_at": "2026-09-07 09:49:40.208772"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 26,
+  "fields": {
+   "product": 3,
+   "rating": 5,
+   "review_text": "The single-slab top is stunning under a pendant light.",
+   "created_at": "2026-09-07 09:49:40.208891"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 27,
+  "fields": {
+   "product": 4,
+   "rating": 5,
+   "review_text": "No box spring needed and no midnight creaking. Great buy.",
+   "created_at": "2026-09-07 09:49:40.211119"
+  }
+ },
+ {
+  "model": "catalog.productreview",
+  "pk": 28,
+  "fields": {
+   "product": 8,
+   "rating": 5,
+   "review_text": "The pedestal base means no knees hitting legs. Well designed.",
+   "created_at": "2026-09-07 09:49:40.220119"
+  }
+ },
+ {
+  "model": "catalog.collection",
+  "pk": 1,
+  "fields": {
+   "name": "The Earth Collection",
+   "slug": "the-earth-collection",
+   "description": "Reclaimed oak, hand-rubbed finishes and undyed linen - a collection built around what the earth already does best. Each piece is finished by hand in small batches.",
+   "image_url": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
+   "is_featured": true,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.788611"
+  }
+ },
+ {
+  "model": "catalog.collection",
+  "pk": 2,
+  "fields": {
+   "name": "The Monochrome Line",
+   "slug": "the-monochrome-line",
+   "description": "Charred-oak finishes and matte black hardware for spaces that speak in a lower register.",
+   "image_url": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop",
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.792004"
+  }
+ },
+ {
+  "model": "catalog.collection",
+  "pk": 3,
+  "fields": {
+   "name": "The Coastal Edit",
+   "slug": "the-coastal-edit",
+   "description": "Bleached ash and woven rattan pieces designed for rooms that live for sunlight.",
+   "image_url": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?q=80&w=1000&auto=format&fit=crop",
+   "is_featured": false,
+   "is_active": true,
+   "created_at": "2026-09-07 07:45:09.794074"
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 21,
+  "fields": {
+   "collection": 1,
+   "product": 1,
+   "sort_order": 0
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 22,
+  "fields": {
+   "collection": 1,
+   "product": 2,
+   "sort_order": 1
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 23,
+  "fields": {
+   "collection": 1,
+   "product": 3,
+   "sort_order": 2
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 24,
+  "fields": {
+   "collection": 1,
+   "product": 8,
+   "sort_order": 3
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 25,
+  "fields": {
+   "collection": 2,
+   "product": 6,
+   "sort_order": 0
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 26,
+  "fields": {
+   "collection": 2,
+   "product": 7,
+   "sort_order": 1
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 27,
+  "fields": {
+   "collection": 2,
+   "product": 4,
+   "sort_order": 2
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 28,
+  "fields": {
+   "collection": 3,
+   "product": 5,
+   "sort_order": 0
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 29,
+  "fields": {
+   "collection": 3,
+   "product": 10,
+   "sort_order": 1
+  }
+ },
+ {
+  "model": "catalog.collectionproduct",
+  "pk": 30,
+  "fields": {
+   "collection": 3,
+   "product": 9,
+   "sort_order": 2
+  }
+ }
+]

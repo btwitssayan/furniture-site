@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — WOODORA Admin</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html" class="active">◆ Dashboard</a>
+      <a href="admin-products.html">▤ Products</a>
+      <a href="admin-orders.html">▥ Orders</a>
+      <a href="admin-customers.html">◈ Customers</a>
+      <a href="admin-inventory.html">▦ Inventory</a>
+      <a href="admin-categories.html">▧ Categories</a>
+      <a href="admin-collections.html">▨ Collections</a>
+      <a href="admin-reviews.html">★ Reviews</a>
+      <a href="admin-content.html">✎ Content</a>
+      <a href="admin-analytics.html">▲ Analytics</a>
+      <a href="admin-settings.html">⚙ Settings</a>
+      <a href="admin-login.html">↩ Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>Dashboard</h1>
+      <a href="admin-add-product.html" class="btn btn-primary btn-small">+ Add Product</a>
+    </div>
+
+    <div class="admin-cards">
+      <div class="admin-card d-1">
+        <div class="ac-label">Total Sales</div>
+        <div class="ac-value">₹8,45,230</div>
+        <div class="ac-trend"><span class="arrow-up">↑</span> 12.5% this month</div>
+      </div>
+      <div class="admin-card d-2">
+        <div class="ac-label">Orders</div>
+        <div class="ac-value">1,204</div>
+        <div class="ac-trend"><span class="arrow-up">↑</span> 8.2% this month</div>
+      </div>
+      <div class="admin-card d-3">
+        <div class="ac-label">New Customers</div>
+        <div class="ac-value">312</div>
+        <div class="ac-trend"><span class="arrow-up">↑</span> 4.1% this month</div>
+      </div>
+      <div class="admin-card d-4">
+        <div class="ac-label">Low Stock Items</div>
+        <div class="ac-value">7</div>
+        <div class="ac-trend down">↓ needs attention</div>
+      </div>
+    </div>
+
+    <div class="admin-panel">
+      <h3>Revenue — Last 8 Weeks</h3>
+      <div class="chart-placeholder">
+        <div class="bar" style="height:55%; animation-delay:.05s;"></div>
+        <div class="bar" style="height:70%; animation-delay:.1s;"></div>
+        <div class="bar" style="height:48%; animation-delay:.15s;"></div>
+        <div class="bar" style="height:82%; animation-delay:.2s;"></div>
+        <div class="bar" style="height:65%; animation-delay:.25s;"></div>
+        <div class="bar" style="height:90%; animation-delay:.3s;"></div>
+        <div class="bar" style="height:75%; animation-delay:.35s;"></div>
+        <div class="bar" style="height:97%; animation-delay:.4s;"></div>
+      </div>
+    </div>
+
+    <div class="admin-panel">
+      <h3>Recent Orders</h3>
+      <table class="admin-table">
+        <thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr><td>#WD-48213</td><td>Aarav Mehta</td><td>21 Aug 2026</td><td>₹1,05,731</td><td><span class="status-pill pending">Shipped</span></td><td class="table-actions"><a href="#">View</a></td></tr>
+          <tr><td>#WD-48198</td><td>Priya Nair</td><td>20 Aug 2026</td><td>₹22,750</td><td><span class="status-pill paid">Delivered</span></td><td class="table-actions"><a href="#">View</a></td></tr>
+          <tr><td>#WD-48170</td><td>Rohan Iyer</td><td>19 Aug 2026</td><td>₹64,999</td><td><span class="status-pill paid">Delivered</span></td><td class="table-actions"><a href="#">View</a></td></tr>
+          <tr><td>#WD-48155</td><td>Sana Kapoor</td><td>18 Aug 2026</td><td>₹41,250</td><td><span class="status-pill low">Cancelled</span></td><td class="table-actions"><a href="#">View</a></td></tr>
+          <tr><td>#WD-48140</td><td>Vikram Desai</td><td>17 Aug 2026</td><td>₹1,49,990</td><td><span class="status-pill pending">Processing</span></td><td class="table-actions"><a href="#">View</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

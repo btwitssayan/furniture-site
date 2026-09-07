@@ -1,0 +1,175 @@
+/* ==========================================================================
+   WOODORA — Animation System
+   Smooth · Cinematic · Elegant · Minimal · Premium
+   ========================================================================== */
+
+:root {
+  --transition-fast: 0.25s ease;
+  --transition: 0.5s cubic-bezier(.2,.8,.2,1);
+  --transition-slow: 0.9s cubic-bezier(.16,1,.3,1);
+}
+
+/* ---------- Keyframes ---------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(35px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(-35px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeRight {
+  from { opacity: 0; transform: translateX(35px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes navDrop {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes revealImage {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes growLine {
+  from { width: 0; }
+  to { width: 64px; }
+}
+
+@keyframes growLine100 {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes growBar {
+  to { transform: scaleY(1); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes nudgeUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes loaderOut {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+/* ---------- Reusable reveal classes ----------
+   Prepared for future JS (IntersectionObserver) to toggle an
+   "in-view" class. Until then, .in-view ships pre-applied so
+   content is visible without JS, and the keyframes stay ready. */
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.image-reveal {
+  opacity: 0;
+}
+
+.reveal-up.in-view,
+.in-view.reveal-up { animation: fadeUp var(--transition-slow) forwards; }
+
+.reveal-left.in-view,
+.in-view.reveal-left { animation: fadeLeft var(--transition-slow) forwards; }
+
+.reveal-right.in-view,
+.in-view.reveal-right { animation: fadeRight var(--transition-slow) forwards; }
+
+.reveal-scale.in-view,
+.in-view.reveal-scale { animation: scaleIn var(--transition-slow) forwards; }
+
+.image-reveal.in-view,
+.in-view.image-reveal { animation: revealImage 1s cubic-bezier(.16,1,.3,1) forwards; opacity: 1; }
+
+/* No-JS fallback: since this build ships without JavaScript,
+   apply the animations directly on load so nothing stays hidden. */
+.reveal-up { animation: fadeUp var(--transition-slow) both; }
+.reveal-left { animation: fadeLeft var(--transition-slow) both; }
+.reveal-right { animation: fadeRight var(--transition-slow) both; }
+.reveal-scale { animation: scaleIn var(--transition-slow) both; }
+.image-reveal { animation: revealImage 1s cubic-bezier(.16,1,.3,1) both; }
+
+/* Staggered delays for card grids */
+.d-1 { animation-delay: 0.1s; }
+.d-2 { animation-delay: 0.2s; }
+.d-3 { animation-delay: 0.3s; }
+.d-4 { animation-delay: 0.4s; }
+.d-5 { animation-delay: 0.5s; }
+.d-6 { animation-delay: 0.6s; }
+.d-7 { animation-delay: 0.7s; }
+.d-8 { animation-delay: 0.8s; }
+
+/* Fade-up utility for generic entrances */
+.fade-up { animation: fadeUp 0.8s cubic-bezier(.16,1,.3,1) forwards; }
+
+/* Custom cursor (progressive enhancement, CSS-only, desktop only, optional) */
+@media (hover: hover) and (pointer: fine) {
+  .cursor-aware a,
+  .cursor-aware button {
+    transition: filter var(--transition-fast);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal-up, .reveal-left, .reveal-right, .reveal-scale, .image-reveal {
+    opacity: 1 !important;
+    clip-path: none !important;
+    transform: none !important;
+  }
+}

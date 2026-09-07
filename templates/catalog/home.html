@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}WOODORA &mdash; Furniture That Defines Your Space{% endblock %}
+
+{% block loader %}
+<div class="loader-screen" aria-hidden="true">
+  <div class="brand">WOODORA</div>
+  <div class="loader-line"></div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1600&auto=format&fit=crop" alt="Warm minimalist living room with wooden furniture">
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow">The 2026 Collection</span>
+    <h1 class="hero-title">
+      <span>Designed for Living.</span>
+      <span>Crafted for Life.</span>
+    </h1>
+    <p class="hero-desc">Beautiful furniture for beautiful spaces &mdash; solid wood, honest craftsmanship, and pieces built to outlast trends.</p>
+    <div class="hero-actions">
+      <a href="{% url 'catalog:shop' %}" class="btn btn-gold">Shop Collection <span class="arrow">&rarr;</span></a>
+      <a href="{% url 'catalog:collection_list' %}" class="btn btn-outline">View Lookbook</a>
+    </div>
+  </div>
+  {% with spotlight=featured_products.0 %}
+    {% if spotlight %}
+      <a href="{% url 'catalog:product_detail' spotlight.slug %}" class="floating-card">
+        <img src="{{ spotlight.primary_image.image_url }}" alt="{{ spotlight.name }}">
+        <div>
+          <div class="fc-name">{{ spotlight.name }}</div>
+          <div class="fc-price">&#8377;{{ spotlight.price|rupees }}</div>
+          <div class="fc-stars">&#9733;&#9733;&#9733;&#9733;&#9733; {{ spotlight.rating|floatformat:1 }}</div>
+        </div>
+      </a>
+    {% endif %}
+  {% endwith %}
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Solid Wood</span><span>Premium Craftsmanship</span><span>Free Delivery</span><span>Easy Returns</span><span>Timeless Design</span>
+    <span>Solid Wood</span><span>Premium Craftsmanship</span><span>Free Delivery</span><span>Easy Returns</span><span>Timeless Design</span>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal-up">Shop by Room</span>
+        <h2 class="section-title reveal-up d-1">Every Space, <br>Considered.</h2>
+      </div>
+      <p class="lede reveal-up d-2">From the first sketch to the final joint, every WOODORA piece is designed to belong in your home for decades, not seasons.</p>
+    </div>
+
+    <div class="category-grid">
+      {% for category in categories %}
+        <a href="{% url 'catalog:category_detail' category.slug %}" class="category-card reveal-scale d-{{ forloop.counter }}">
+          <div class="cat-media"><img src="{{ category.image_url }}" alt="{{ category.name }}"></div>
+          <div class="cat-info"><div class="cat-name">{{ category.name }}</div><span class="cat-link">Explore Collection &rarr;</span></div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal-up">Bestsellers</span>
+        <h2 class="section-title reveal-up d-1">Loved &amp; Lived-In.</h2>
+      </div>
+      <a href="{% url 'catalog:shop' %}" class="btn btn-outline reveal-up d-2">View All <span class="arrow">&rarr;</span></a>
+    </div>
+
+    <div class="product-grid">
+      {% for product in featured_products %}
+        {% include "catalog/_product_card.html" with delay=forloop.counter %}
+      {% empty %}
+        <p class="lede">No featured products yet. Mark products as featured in the admin to fill this row.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if editorial_collection %}
+<section class="section">
+  <div class="container">
+    <span class="eyebrow reveal-up">Editorial</span>
+    <div class="editorial mt-2">
+      <div class="editorial-media image-reveal">
+        <img src="{{ editorial_collection.image_url }}" alt="{{ editorial_collection.name }} interior">
+      </div>
+      <div class="reveal-right d-2">
+        <span class="eyebrow">{{ editorial_collection.name }}</span>
+        <h2 class="editorial-title">Natural materials.<br>Timeless design.</h2>
+        <div class="editorial-line"></div>
+        <p class="lede">{{ editorial_collection.description }}</p>
+        <a href="{% url 'catalog:collection_detail' editorial_collection.slug %}" class="btn btn-primary mt-2">Explore Collection <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal-up" style="color:var(--gold)">Why Woodora</span>
+        <h2 class="section-title reveal-up d-1">Fifteen Years of<br>Honest Craft.</h2>
+      </div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal-up d-1" style="border-color:rgba(247,243,237,0.15)">
+        <div class="stat-num">10+</div><div class="stat-label" style="color:var(--beige)">Years of Craft</div>
+      </div>
+      <div class="stat-card reveal-up d-2" style="border-color:rgba(247,243,237,0.15)">
+        <div class="stat-num">50K+</div><div class="stat-label" style="color:var(--beige)">Happy Customers</div>
+      </div>
+      <div class="stat-card reveal-up d-3" style="border-color:rgba(247,243,237,0.15)">
+        <div class="stat-num">100+</div><div class="stat-label" style="color:var(--beige)">Furniture Designs</div>
+      </div>
+      <div class="stat-card reveal-up d-4" style="border-color:rgba(247,243,237,0.15)">
+        <div class="stat-num">25+</div><div class="stat-label" style="color:var(--beige)">Cities</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nordic Lounge Chair — WOODORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .pd-grid { display:grid; grid-template-columns: 100px 1fr 1fr; gap: 1.5rem; }
+  .pd-thumbs { display:flex; flex-direction:column; gap:0.9rem; }
+  .pd-thumbs img { border-radius: var(--radius-s); overflow:hidden; aspect-ratio:1/1; object-fit:cover; border:1px solid var(--line); transition: transform var(--transition-fast), border-color var(--transition-fast); }
+  .pd-thumbs img:hover { transform: scale(1.05); border-color: var(--wood); cursor:pointer; }
+  .pd-main { border-radius: var(--radius-m); overflow:hidden; aspect-ratio: 1/1.05; }
+  .pd-main img { width:100%; height:100%; object-fit:cover; animation: heroZoom 6s ease-out forwards; }
+  .pd-info > * + * { margin-top: 1.2rem; }
+  .pd-info .field:nth-of-type(1) { animation-delay: .1s; }
+  .pd-qty-row { display:flex; gap:1rem; align-items:center; }
+  @media (max-width: 900px){ .pd-grid{ grid-template-columns: 1fr; } .pd-thumbs{ flex-direction:row; order:3; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link active">Shop</a></li>
+      <li><a href="collections.html" class="nav-link">Collections</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="wishlist.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg></a>
+      <a href="login.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c1.6-3.5 4.5-5.3 7.5-5.3s5.9 1.8 7.5 5.3"/></svg></a>
+      <a href="cart.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16l-1.5 10.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"/><path d="M8 6V5a4 4 0 0 1 8 0v1"/></svg><span class="badge-count">3</span></a>
+    </div>
+    <label for="nav-toggle" class="nav-toggle icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="line-top" d="M4 7h16"/><path class="line-mid" d="M4 12h16"/><path class="line-bottom" d="M4 17h16"/></svg>
+    </label>
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="breadcrumb reveal-up"><a href="index.html">Home</a><span>/</span><a href="shop.html">Shop</a><span>/</span><a href="chairs.html">Chairs</a><span>/</span>Nordic Lounge Chair</div>
+
+    <div class="pd-grid mt-2">
+      <div class="pd-thumbs reveal-left">
+        <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=300&auto=format&fit=crop" alt="Thumbnail 1">
+        <img src="https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=300&auto=format&fit=crop" alt="Thumbnail 2">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=300&auto=format&fit=crop" alt="Thumbnail 3">
+      </div>
+
+      <div class="pd-main reveal-scale d-1">
+        <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=1000&auto=format&fit=crop" alt="Nordic Lounge Chair">
+      </div>
+
+      <div class="pd-info reveal-right d-2">
+        <span class="eyebrow">Chairs · Nordic Line</span>
+        <h1 style="font-size:2rem;">Nordic Lounge Chair</h1>
+        <div class="product-stars" style="font-size:0.95rem;">★★★★★ <span style="color:var(--text-soft); font-size:0.85rem;">4.8 (214 reviews)</span></div>
+        <div class="product-price" style="font-size:1.6rem;"><span class="was" style="font-size:1rem;">₹19,999</span>₹14,999</div>
+        <p>Solid ash-wood frame with a hand-upholstered bouclé seat. The Nordic Lounge Chair is built on a gently curved silhouette that supports the lower back through long reading sessions — finished by hand in our Pune workshop.</p>
+
+        <div class="field">
+          <label>Finish</label>
+          <select><option>Natural Ash</option><option>Walnut Stain</option><option>Ebony Black</option></select>
+        </div>
+
+        <div class="pd-qty-row">
+          <div class="qty-control"><button aria-label="Decrease">−</button><span>1</span><button aria-label="Increase">+</button></div>
+          <a href="cart.html" class="btn btn-primary" style="flex:1; justify-content:center;">Add to Cart <span class="arrow">→</span></a>
+          <button class="wishlist-btn" style="position:static; opacity:1;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--dark-brown)" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg></button>
+        </div>
+
+        <hr class="divider">
+        <p style="font-size:0.85rem;">✓ Free delivery in 7–10 days &nbsp; ✓ 30-day easy returns &nbsp; ✓ 5-year structural warranty</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow reveal-up">You May Also Like</span>
+    <div class="product-grid mt-2">
+      <div class="product-card reveal-up d-1">
+        <div class="product-media">
+          <a href="product.html" class="product-media-link" aria-label="View Wishbone Accent Chair">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=700&auto=format&fit=crop" alt="Wishbone Accent Chair">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=700&auto=format&fit=crop" alt="">
+            <div class="pc-cart"><span class="btn btn-primary btn-block btn-small">Add to Cart</span></div>
+          </a>
+        </div>
+        <div class="product-info"><div class="product-name">Wishbone Accent Chair</div><div class="product-meta"><span class="product-price">₹11,499</span><span class="product-stars">★★★★☆</span></div></div>
+      </div>
+      <div class="product-card reveal-up d-2">
+        <div class="product-media">
+          <a href="product.html" class="product-media-link" aria-label="View Ember Coffee Table">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=700&auto=format&fit=crop" alt="Ember Coffee Table">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=700&auto=format&fit=crop" alt="">
+            <div class="pc-cart"><span class="btn btn-primary btn-block btn-small">Add to Cart</span></div>
+          </a>
+        </div>
+        <div class="product-info"><div class="product-name">Ember Round Coffee Table</div><div class="product-meta"><span class="product-price">₹13,599</span><span class="product-stars">★★★★★</span></div></div>
+      </div>
+      <div class="product-card reveal-up d-3">
+        <div class="product-media">
+          <a href="product.html" class="product-media-link" aria-label="View Foundry Writing Desk">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?q=80&w=700&auto=format&fit=crop" alt="Foundry Writing Desk">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?q=80&w=700&auto=format&fit=crop" alt="">
+            <div class="pc-cart"><span class="btn btn-primary btn-block btn-small">Add to Cart</span></div>
+          </a>
+        </div>
+        <div class="product-info"><div class="product-name">Foundry Writing Desk</div><div class="product-meta"><span class="product-price">₹22,750</span><span class="product-stars">★★★★☆</span></div></div>
+      </div>
+      <div class="product-card reveal-up d-4">
+        <div class="product-media">
+          <a href="product.html" class="product-media-link" aria-label="View Camden Wardrobe">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=700&auto=format&fit=crop" alt="Camden Wardrobe">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1616627782675-e5f4287a5f9c?q=80&w=700&auto=format&fit=crop" alt="">
+            <div class="pc-cart"><span class="btn btn-primary btn-block btn-small">Add to Cart</span></div>
+          </a>
+        </div>
+        <div class="product-info"><div class="product-name">Camden Three-Door Wardrobe</div><div class="product-meta"><span class="product-price">₹49,999</span><span class="product-stars">★★★★★</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand">WOOD<span>ORA</span></a><p>Furniture that defines your space — solid wood pieces crafted for the way you actually live.</p></div>
+      <div class="footer-col"><h5>Shop</h5><a href="shop.html">All Furniture</a><a href="sofas.html">Sofas</a><a href="dining.html">Dining</a><a href="collections.html">Collections</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="order-tracking.html">Track Order</a><a href="account.html">My Account</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="contact.html">Help Center</a><a href="checkout.html">Shipping</a><a href="cart.html">Returns</a><a href="contact.html">Emergency Support</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 WOODORA. All rights reserved.</span><span>Made with care, in wood and code.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

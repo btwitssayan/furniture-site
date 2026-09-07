@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}{{ product.name }} &mdash; WOODORA{% endblock %}
+{% block description %}{{ product.description|truncatewords:30 }}{% endblock %}
+
+{% block content %}
+<section class="section-tight">
+  <div class="container">
+    <div class="breadcrumb reveal-up">
+      <a href="{% url 'catalog:home' %}">Home</a><span>/</span>
+      <a href="{% url 'catalog:shop' %}">Shop</a><span>/</span>
+      <a href="{% url 'catalog:category_detail' product.subcategory.category.slug %}">{{ product.subcategory.category.name }}</a><span>/</span>{{ product.name }}
+    </div>
+
+    <div class="pd-grid mt-2">
+      <div class="pd-thumbs reveal-left">
+        {% for image in product.images.all %}
+          <img src="{{ image.image_url }}" alt="{{ image.alt_text|default:product.name }}"
+               class="{% if forloop.first %}is-active{% endif %}" data-pd-thumb>
+        {% endfor %}
+      </div>
+
+      <div class="pd-main reveal-scale d-1">
+        {% with primary=product.primary_image %}
+          <img id="pd-main-image" src="{{ primary.image_url }}" alt="{{ primary.alt_text|default:product.name }}">
+        {% endwith %}
+      </div>
+
+      <div class="pd-info reveal-right d-2">
+        <span class="eyebrow">{{ product.subcategory.category.name }} &middot; {{ product.subcategory.name }}</span>
+        <h1 style="font-size:2rem;">{{ product.name }}</h1>
+        <div class="product-stars" style="font-size:0.95rem;">
+          {% for _ in product.full_stars %}&#9733;{% endfor %}{% for _ in product.empty_stars %}&#9734;{% endfor %}
+          <span style="color:var(--text-soft); font-size:0.85rem;">{{ product.rating|floatformat:1 }} ({{ product.review_count }} review{{ product.review_count|pluralize }})</span>
+        </div>
+        <div class="product-price" style="font-size:1.6rem;">
+          {% if product.is_on_sale %}<span class="was" style="font-size:1rem;">&#8377;{{ product.compare_at_price|rupees }}</span>{% endif %}&#8377;{{ product.price|rupees }}
+        </div>
+        <p>{{ product.description|linebreaksbr }}</p>
+
+        {% if variants %}
+          <div class="field">
+            <label for="finish">Finish</label>
+            <select id="finish">
+              {% for variant in variants %}
+                <option>{{ variant.name }}{% if variant.price %} &mdash; &#8377;{{ variant.price|rupees }}{% endif %}</option>
+              {% endfor %}
+            </select>
+          </div>
+        {% endif %}
+
+        <div class="pd-qty-row">
+          <div class="qty-control"><button aria-label="Decrease">&minus;</button><span>1</span><button aria-label="Increase">+</button></div>
+          <a href="{% url 'catalog:contact' %}" class="btn btn-primary" style="flex:1; justify-content:center;">Enquire <span class="arrow">&rarr;</span></a>
+          <button class="wishlist-btn" style="position:static; opacity:1;" aria-label="Add to wishlist">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark-brown)" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg>
+          </button>
+        </div>
+
+        <hr class="divider">
+        <p style="font-size:0.85rem;">
+          &#10003; Free delivery in 7&ndash;10 days &nbsp;
+          &#10003; 30-day easy returns
+          {% if product.warranty_years %}&nbsp; &#10003; {{ product.warranty_years }}-year structural warranty{% endif %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if product.reviews.all %}
+<section class="section-tight">
+  <div class="container">
+    <span class="eyebrow reveal-up">Customer Reviews</span>
+    <div class="order-summary mt-2" style="max-width:760px;">
+      {% for review in product.reviews.all|slice:":5" %}
+        <div class="order-item">
+          <div>
+            <span class="product-stars">{% for _ in "12345"|make_list %}{% if forloop.counter <= review.rating %}&#9733;{% else %}&#9734;{% endif %}{% endfor %}</span>
+            <div style="font-size:0.9rem; margin-top:0.4rem;">{{ review.review_text }}</div>
+          </div>
+          <span style="font-size:0.8rem; color:var(--text-soft); white-space:nowrap;">{{ review.created_at|date:"j M Y" }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow reveal-up">You May Also Like</span>
+    <div class="product-grid mt-2">
+      {% for related in related_products %}
+        {% include "catalog/_product_card.html" with product=related delay=forloop.counter %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Click a thumbnail to swap the main product image.
+  (function () {
+    var main = document.getElementById('pd-main-image');
+    var thumbs = document.querySelectorAll('[data-pd-thumb]');
+    if (!main) return;
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        main.src = thumb.src;
+        main.alt = thumb.alt;
+        thumbs.forEach(function (t) { t.classList.remove('is-active'); });
+        thumb.classList.add('is-active');
+      });
+    });
+  })();
+</script>
+{% endblock %}

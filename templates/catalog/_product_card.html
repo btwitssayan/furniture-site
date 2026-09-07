@@ -1,0 +1,31 @@
+{% load catalog_extras %}
+{% comment %}
+Shared product card. Expects `product`, and optionally `delay` (1-4) to keep
+the staggered reveal animation from the original static pages.
+{% endcomment %}
+<div class="product-card reveal-up{% if delay %} d-{{ delay }}{% endif %}">
+  <div class="product-media">
+    {% if product.discount_percent %}
+      <span class="sale-badge">{{ product.discount_percent }}% OFF</span>
+    {% endif %}
+    <button class="wishlist-btn" aria-label="Add to wishlist">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg>
+    </button>
+    <a href="{% url 'catalog:product_detail' product.slug %}" class="product-media-link" aria-label="View {{ product.name }}">
+      {% with primary=product.primary_image secondary=product.secondary_image %}
+        <img class="img-primary" src="{{ primary.image_url }}" alt="{{ primary.alt_text|default:product.name }}">
+        <img class="img-secondary" src="{{ secondary.image_url|default:primary.image_url }}" alt="">
+      {% endwith %}
+      <div class="pc-cart"><span class="btn btn-primary btn-block btn-small">View Product</span></div>
+    </a>
+  </div>
+  <div class="product-info">
+    <div class="product-name">{{ product.name }}</div>
+    <div class="product-meta">
+      <span class="product-price">
+        {% if product.is_on_sale %}<span class="was">&#8377;{{ product.compare_at_price|rupees }}</span>{% endif %}&#8377;{{ product.price|rupees }}
+      </span>
+      <span class="product-stars">{% for _ in product.full_stars %}&#9733;{% endfor %}{% for _ in product.empty_stars %}&#9734;{% endfor %}</span>
+    </div>
+  </div>
+</div>

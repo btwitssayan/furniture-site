@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart — WOODORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .cart-layout { display:grid; grid-template-columns: 1.6fr 1fr; gap: 3rem; align-items:start; }
+  .cr-name { font-family: var(--font-display); font-size: 1.05rem; }
+  .cr-meta { font-size: 0.82rem; color: var(--text-soft); margin-top: 0.3rem; }
+  .cr-price { font-weight:600; color: var(--wood); }
+  @media (max-width: 900px){ .cart-layout{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="collections.html" class="nav-link">Collections</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="wishlist.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg></a>
+      <a href="login.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c1.6-3.5 4.5-5.3 7.5-5.3s5.9 1.8 7.5 5.3"/></svg></a>
+      <a href="cart.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16l-1.5 10.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"/><path d="M8 6V5a4 4 0 0 1 8 0v1"/></svg><span class="badge-count">3</span></a>
+    </div>
+    <label for="nav-toggle" class="nav-toggle icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="line-top" d="M4 7h16"/><path class="line-mid" d="M4 12h16"/><path class="line-bottom" d="M4 17h16"/></svg>
+    </label>
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="section-tight">
+  <div class="container">
+    <span class="eyebrow reveal-up">3 Items</span>
+    <h1 class="section-title reveal-up d-1" style="margin-bottom:2rem;">Your Cart</h1>
+
+    <div class="cart-layout">
+      <div class="reveal-left">
+        <div class="cart-row">
+          <div class="cr-media"><img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=300&auto=format&fit=crop" alt="Nordic Lounge Chair"></div>
+          <div><div class="cr-name">Nordic Lounge Chair</div><div class="cr-meta">Finish: Natural Ash</div></div>
+          <div class="qty-control"><button>−</button><span>1</span><button>+</button></div>
+          <div style="text-align:right;"><div class="cr-price">₹14,999</div><a href="#" class="cr-remove">Remove</a></div>
+        </div>
+        <div class="cart-row">
+          <div class="cr-media"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=300&auto=format&fit=crop" alt="Oakwood Sofa"></div>
+          <div><div class="cr-name">Oakwood Three-Seater Sofa</div><div class="cr-meta">Finish: Walnut</div></div>
+          <div class="qty-control"><button>−</button><span>1</span><button>+</button></div>
+          <div style="text-align:right;"><div class="cr-price">₹58,499</div><a href="#" class="cr-remove">Remove</a></div>
+        </div>
+        <div class="cart-row">
+          <div class="cr-media"><img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=300&auto=format&fit=crop" alt="Ember Coffee Table"></div>
+          <div><div class="cr-name">Ember Round Coffee Table</div><div class="cr-meta">Finish: Natural Oak</div></div>
+          <div class="qty-control"><button>−</button><span>2</span><button>+</button></div>
+          <div style="text-align:right;"><div class="cr-price">₹27,198</div><a href="#" class="cr-remove">Remove</a></div>
+        </div>
+        <a href="shop.html" class="btn btn-outline mt-2">← Continue Shopping</a>
+      </div>
+
+      <div class="order-summary reveal-right d-2">
+        <h3 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:1.2rem;">Order Summary</h3>
+        <div class="summary-row"><span>Subtotal</span><span>₹1,00,696</span></div>
+        <div class="summary-row"><span>Delivery</span><span>Free</span></div>
+        <div class="summary-row"><span>Estimated Tax</span><span>₹5,035</span></div>
+        <div class="summary-row total"><span>Total</span><span>₹1,05,731</span></div>
+        <a href="checkout.html" class="btn btn-primary btn-block mt-2">Proceed to Checkout <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand">WOOD<span>ORA</span></a><p>Furniture that defines your space — solid wood pieces crafted for the way you actually live.</p></div>
+      <div class="footer-col"><h5>Shop</h5><a href="shop.html">All Furniture</a><a href="sofas.html">Sofas</a><a href="dining.html">Dining</a><a href="collections.html">Collections</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="order-tracking.html">Track Order</a><a href="account.html">My Account</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="contact.html">Help Center</a><a href="checkout.html">Shipping</a><a href="cart.html">Returns</a><a href="contact.html">Emergency Support</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 WOODORA. All rights reserved.</span><span>Made with care, in wood and code.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

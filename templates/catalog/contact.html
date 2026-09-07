@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Contact &mdash; WOODORA{% endblock %}
+
+{% block content %}
+
+<section class="page-banner" style="min-height:38vh;">
+  <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop" alt="Contact WOODORA">
+  <div class="page-banner-content">
+    <span class="eyebrow">We're Here to Help</span>
+    <h1>Get in Touch</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal-left">
+        <span class="eyebrow">Send a Message</span>
+        <h2 class="section-title" style="margin-top:0.8rem;">Let's talk furniture.</h2>
+        <form style="margin-top:2rem;">
+          <div class="field"><label>Full Name</label><input type="text" placeholder="Your name"></div>
+          <div class="field"><label>Email</label><input type="email" placeholder="you@example.com"></div>
+          <div class="field"><label>Subject</label><input type="text" placeholder="How can we help?"></div>
+          <div class="field"><label>Message</label><textarea rows="5" placeholder="Tell us more..."></textarea></div>
+          <button type="button" class="btn btn-primary">Send Message <span class="arrow">→</span></button>
+        </form>
+      </div>
+
+      <div class="reveal-right d-2">
+        <div class="contact-card mt-2">
+          <h4 style="font-size:1.1rem;">Showroom</h4>
+          <p style="margin-top:0.5rem;">14 Malviya Nagar Industrial Road, Jaipur, Rajasthan 302017</p>
+        </div>
+        <div class="contact-card mt-2">
+          <h4 style="font-size:1.1rem;">Customer Care</h4>
+          <p style="margin-top:0.5rem;">Mon–Sat, 10am–7pm IST · hello@woodora.example · +91 141 234 5678</p>
+        </div>
+        <div class="contact-card mt-2">
+          <h4 style="font-size:1.1rem;">Need Urgent Help?</h4>
+          <p style="margin-top:0.5rem;">Damaged delivery or order emergency — reach our priority line.</p>
+          <a href="tel:+911412345678" class="btn btn-support mt-2" style="margin-top:1rem;">Emergency Support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

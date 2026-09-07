@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}{{ collection.name }} &mdash; WOODORA{% endblock %}
+{% block description %}{{ collection.description|truncatewords:30 }}{% endblock %}
+
+{% block content %}
+<section class="page-banner">
+  <img src="{{ collection.image_url }}" alt="{{ collection.name }}">
+  <div class="page-banner-content">
+    <span class="eyebrow">Collection</span>
+    <h1>{{ collection.name }}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="breadcrumb reveal-up">
+      <a href="{% url 'catalog:home' %}">Home</a><span>/</span>
+      <a href="{% url 'catalog:collection_list' %}">Collections</a><span>/</span>{{ collection.name }}
+    </div>
+
+    {% if collection.description %}
+      <p class="lede reveal-up d-1 mt-2" style="max-width:640px;">{{ collection.description }}</p>
+    {% endif %}
+
+    <div class="product-grid mt-2">
+      {% for product in products %}
+        {% include "catalog/_product_card.html" with delay=forloop.counter0|stagger %}
+      {% empty %}
+        <p class="lede">No products in this collection yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load catalog_extras %}
+
+{% block title %}{% if query %}{{ query }} &mdash; Search{% else %}Search{% endif %} &mdash; WOODORA{% endblock %}
+
+{% block content %}
+<section class="section-tight">
+  <div class="container">
+    <div class="breadcrumb reveal-up">
+      <a href="{% url 'catalog:home' %}">Home</a><span>/</span>Search
+    </div>
+
+    <div class="search-hero reveal-up d-1">
+      <span class="eyebrow">Search the Catalogue</span>
+      <form action="{% url 'catalog:search' %}" method="get" class="search-form" role="search">
+        <input type="search" name="q" value="{{ query }}" autofocus
+               placeholder="Try &ldquo;oak dining table&rdquo; or &ldquo;walnut sofa&rdquo;"
+               aria-label="Search products">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <p class="search-hint">
+        Full-text search across product names, finishes, categories and descriptions.
+        Use quotes for an exact phrase, or <code>-word</code> to exclude.
+      </p>
+    </div>
+
+    {% if query %}
+      <div class="filter-summary">
+        <span>
+          {% if product_count %}
+            {{ product_count }} result{{ product_count|pluralize }} for &ldquo;{{ query }}&rdquo;
+            {% if fuzzy %}<em class="search-fuzzy">&mdash; no exact match, showing closest names</em>{% endif %}
+          {% else %}
+            No results for &ldquo;{{ query }}&rdquo;
+          {% endif %}
+        </span>
+        <a href="{% url 'catalog:shop' %}" class="filter-clear">Browse all furniture &rarr;</a>
+      </div>
+
+      <div class="product-grid">
+        {% for product in products %}
+          {% include "catalog/_product_card.html" with delay=forloop.counter0|stagger %}
+        {% endfor %}
+      </div>
+
+      {% if not product_count %}
+        <div class="search-empty">
+          <p class="lede">Nothing matched that search.</p>
+          <p>Try a broader term, or browse by category:</p>
+          <div class="filter-bar mt-2">
+            {% for category in nav_categories %}
+              <a href="{% url 'catalog:category_detail' category.slug %}" class="filter-chip">{{ category.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

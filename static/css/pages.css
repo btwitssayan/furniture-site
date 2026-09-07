@@ -1,0 +1,333 @@
+/* ==========================================================================
+   pages.css — styles for markup that the original stylesheets never covered.
+
+   style.css / animations.css / responsive.css are the untouched originals.
+   The product detail page and the contact page both used class names
+   (.pd-grid, .pd-thumbs, .contact-grid, ...) that were never defined there,
+   so those pages rendered unstyled. Everything below fills those gaps using
+   the existing design tokens.
+   ========================================================================== */
+
+/* ---------- Tiered catalogue filters (shop + category pages) ----------
+   Tier 1 picks the category, tier 2 refines it. The second tier is set on a
+   tinted rail and uses lighter chips so the hierarchy reads at a glance. */
+
+.filter-tier {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+  margin-bottom: 1rem;
+}
+.filter-tier .filter-bar {
+  margin-bottom: 0;
+  flex: 1;
+}
+.filter-label {
+  flex: 0 0 auto;
+  min-width: 108px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  padding-top: 0.2rem;
+}
+
+.filter-tier-sub {
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  background: rgba(233, 222, 208, 0.45);
+  border-left: 2px solid var(--gold);
+  border-radius: var(--radius-m);
+  animation: subtier-in 0.35s ease both;
+}
+@keyframes subtier-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.filter-chip.chip-sub {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.78rem;
+  background: var(--white);
+}
+/* pages.css loads after style.css, so the plain .chip-sub background above
+   would otherwise beat .filter-chip.active on source order and leave the
+   selected chip cream-on-white. Restate the active state here. */
+.filter-chip.chip-sub.active {
+  background: var(--dark-brown);
+  color: var(--cream);
+  border-color: var(--dark-brown);
+}
+.chip-count {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--text-soft);
+}
+.filter-chip.chip-sub.active .chip-count { color: var(--beige); }
+
+.filter-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.82rem;
+  color: var(--text-soft);
+}
+.filter-clear {
+  color: var(--wood);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast, 0.25s ease);
+}
+.filter-clear:hover { border-bottom-color: var(--wood); }
+
+@media (max-width: 720px) {
+  .filter-tier {
+    flex-direction: column;
+    gap: 0.55rem;
+  }
+  .filter-label { min-width: 0; }
+}
+
+/* ---------- Product detail ---------- */
+
+.pd-grid {
+  display: grid;
+  grid-template-columns: 88px 1.05fr 0.95fr;
+  gap: clamp(1.2rem, 3vw, 2.6rem);
+  align-items: start;
+}
+
+.pd-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.pd-thumbs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  opacity: 0.72;
+  transition: opacity var(--transition-fast, 0.25s ease),
+              border-color var(--transition-fast, 0.25s ease);
+}
+.pd-thumbs img:hover,
+.pd-thumbs img.is-active {
+  opacity: 1;
+  border-color: var(--wood);
+}
+
+.pd-main {
+  position: relative;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  background: var(--beige);
+  box-shadow: var(--shadow-soft);
+}
+.pd-main img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.pd-info {
+  padding-top: 0.4rem;
+}
+.pd-info h1 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin: 0.6rem 0 0.9rem;
+}
+.pd-info > .product-stars {
+  display: block;
+  margin-bottom: 0.9rem;
+}
+.pd-info > .product-price {
+  display: block;
+  margin-bottom: 1.4rem;
+}
+.pd-info > p {
+  color: var(--text-soft);
+  line-height: 1.75;
+  margin-bottom: 1.6rem;
+}
+.pd-info .field {
+  max-width: 280px;
+  margin-bottom: 1.6rem;
+}
+
+.pd-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.6rem;
+}
+.pd-qty-row .btn {
+  min-width: 180px;
+}
+.pd-qty-row .wishlist-btn {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--white);
+  transition: border-color var(--transition-fast, 0.25s ease);
+}
+.pd-qty-row .wishlist-btn:hover { border-color: var(--wood); }
+.pd-qty-row .wishlist-btn svg { width: 20px; height: 20px; }
+
+/* ---------- Review list (product detail) ---------- */
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.order-item:last-child { border-bottom: none; }
+
+/* ---------- Contact page ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.contact-card {
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--white);
+}
+.contact-card h4 { font-family: var(--font-display); }
+.contact-card p {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .pd-grid { grid-template-columns: 76px 1fr; }
+  .pd-info { grid-column: 1 / -1; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .pd-grid {
+    grid-template-columns: 1fr;
+  }
+  .pd-thumbs {
+    flex-direction: row;
+    order: 2;
+    overflow-x: auto;
+  }
+  .pd-thumbs img { width: 72px; flex: 0 0 72px; }
+  .pd-main { order: 1; }
+  .pd-info { order: 3; }
+  .pd-qty-row .btn { min-width: 100%; }
+}
+
+/* ---------- Search ---------- */
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.25rem 0.3rem 0.25rem 0.9rem;
+  background: var(--white);
+  transition: border-color var(--transition-fast, 0.25s ease);
+}
+.nav-search:focus-within { border-color: var(--wood); }
+.nav-search input[type="search"] {
+  width: 150px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text);
+}
+.nav-search input[type="search"]:focus { outline: none; }
+.nav-search input[type="search"]::placeholder { color: var(--text-soft); }
+.nav-search button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: var(--text);
+}
+.nav-search button:hover { color: var(--wood); }
+
+.search-hero { margin-bottom: 2.2rem; }
+.search-form {
+  display: flex;
+  gap: 0.8rem;
+  margin: 1rem 0 0.8rem;
+  max-width: 620px;
+}
+.search-form input[type="search"] {
+  flex: 1;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.search-form input[type="search"]:focus {
+  outline: none;
+  border-color: var(--wood);
+}
+.search-hint {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  max-width: 620px;
+}
+.search-hint code {
+  padding: 0.05rem 0.3rem;
+  background: var(--beige);
+  border-radius: var(--radius-s);
+  font-size: 0.9em;
+}
+.search-fuzzy {
+  color: var(--wood);
+  font-style: italic;
+}
+.search-empty { padding: 1rem 0 3rem; }
+
+@media (max-width: 1100px) {
+  /* Not enough room for the input beside the nav; the magnifier stays and
+     submits an empty query, which lands on the full search page. */
+  .nav-search {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+  .nav-search input[type="search"] { display: none; }
+}
+@media (max-width: 560px) {
+  .search-form { flex-direction: column; }
+}

@@ -1,0 +1,80 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}WOODORA{% endblock %}</title>
+<meta name="description" content="{% block description %}WOODORA is a premium furniture house crafting sofas, beds, dining, chairs and decor for spaces that live beautifully.{% endblock %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/animations.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<link rel="stylesheet" href="{% static 'css/pages.css' %}">
+</head>
+<body>
+
+{% block loader %}{% endblock %}
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="{% url 'catalog:home' %}" class="brand">WOOD<span>ORA</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <ul class="nav-links">
+      <li><a href="{% url 'catalog:home' %}" class="nav-link {% if nav == 'home' %}active{% endif %}">Home</a></li>
+      <li><a href="{% url 'catalog:shop' %}" class="nav-link {% if nav == 'shop' %}active{% endif %}">Shop</a></li>
+      <li><a href="{% url 'catalog:collection_list' %}" class="nav-link {% if nav == 'collections' %}active{% endif %}">Collections</a></li>
+      <li><a href="{% url 'catalog:about' %}" class="nav-link {% if nav == 'about' %}active{% endif %}">About</a></li>
+      <li><a href="{% url 'catalog:contact' %}" class="nav-link {% if nav == 'contact' %}active{% endif %}">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <form action="{% url 'catalog:search' %}" method="get" class="nav-search" role="search">
+        <input type="search" name="q" value="{{ query }}" placeholder="Search furniture" aria-label="Search products">
+        <button type="submit" class="icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        </button>
+      </form>
+    </div>
+    <label for="nav-toggle" class="nav-toggle icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="line-top" d="M4 7h16"/><path class="line-mid" d="M4 12h16"/><path class="line-bottom" d="M4 17h16"/></svg>
+    </label>
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+{% block content %}{% endblock %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="{% url 'catalog:home' %}" class="brand">WOOD<span>ORA</span></a>
+        <p>Furniture that defines your space &mdash; solid wood pieces crafted for the way you actually live.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <a href="{% url 'catalog:shop' %}">All Furniture</a>
+        {% for category in nav_categories|slice:":3" %}
+          <a href="{% url 'catalog:category_detail' category.slug %}">{{ category.name }}</a>
+        {% endfor %}
+        <a href="{% url 'catalog:collection_list' %}">Collections</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="{% url 'catalog:about' %}">About Us</a>
+        <a href="{% url 'catalog:contact' %}">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Support</h5>
+        <a href="{% url 'catalog:contact' %}">Help Center</a>
+        <a href="{% url 'catalog:contact' %}">Shipping &amp; Returns</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {% now "Y" %} WOODORA. All rights reserved.</span>
+      <span>Made with care, in wood and code.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

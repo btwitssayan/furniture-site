@@ -1,0 +1,39 @@
+# Render Blueprint. In the dashboard: New -> Blueprint, point it at this repo
+# and Render reads this file instead of you filling the form in by hand.
+#
+# The database is Supabase, not a Render Postgres instance, so no `databases:`
+# block here -- DATABASE_URL is supplied as an environment variable.
+
+services:
+  - type: web
+    name: woodora
+    runtime: python
+    plan: free
+    region: singapore          # nearest to the ap-southeast-1 Supabase project
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn woodora.wsgi:application"
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: SECRET_KEY
+        generateValue: true    # Render generates a strong value on first deploy
+      - key: DEBUG
+        value: "False"
+      - key: WEB_CONCURRENCY
+        value: "2"
+      # --- set these in the dashboard; never commit real values ---
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_BUCKET
+        sync: false
+      - key: SUPABASE_S3_ENDPOINT
+        sync: false
+      - key: SUPABASE_S3_REGION
+        sync: false
+      - key: SUPABASE_S3_ACCESS_KEY_ID
+        sync: false
+      - key: SUPABASE_S3_SECRET_ACCESS_KEY
+        sync: false

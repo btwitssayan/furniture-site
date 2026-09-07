@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — WOODORA</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .checkout-layout { display:grid; grid-template-columns: 1.5fr 1fr; gap:3rem; align-items:start; }
+  .field-row { display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
+  @media (max-width: 900px){ .checkout-layout{ grid-template-columns: 1fr; } .field-row{ grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="shop.html" class="nav-link">Shop</a></li>
+      <li><a href="collections.html" class="nav-link">Collections</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+      <a href="wishlist.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20s-7-4.35-9.5-8.5C.7 8 2.4 4.5 6 4.5c2 0 3.4 1.1 4 2.3.6-1.2 2-2.3 4-2.3 3.6 0 5.3 3.5 3.5 7C19 15.65 12 20 12 20z"/></svg></a>
+      <a href="login.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="3.4"/><path d="M4.5 20c1.6-3.5 4.5-5.3 7.5-5.3s5.9 1.8 7.5 5.3"/></svg></a>
+      <a href="cart.html" class="icon-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16l-1.5 10.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 6z"/><path d="M8 6V5a4 4 0 0 1 8 0v1"/></svg><span class="badge-count">3</span></a>
+    </div>
+    <label for="nav-toggle" class="nav-toggle icon-btn" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path class="line-top" d="M4 7h16"/><path class="line-mid" d="M4 12h16"/><path class="line-bottom" d="M4 17h16"/></svg>
+    </label>
+    <label for="nav-toggle" class="nav-backdrop" aria-hidden="true"></label>
+  </nav>
+</header>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="checkout-steps reveal-up">
+      <div class="step done"><span class="step-num">✓</span><span class="step-label">Cart</span></div>
+      <div class="step active"><span class="step-num">02</span><span class="step-label">Delivery</span></div>
+      <div class="step"><span class="step-num">03</span><span class="step-label">Payment</span></div>
+    </div>
+
+    <div class="checkout-layout">
+      <div class="reveal-left">
+        <h3 style="font-size:1.3rem; margin-bottom:1.4rem;">Delivery Address</h3>
+        <div class="field-row">
+          <div class="field"><label>First Name</label><input type="text" placeholder="Aarav"></div>
+          <div class="field"><label>Last Name</label><input type="text" placeholder="Mehta"></div>
+        </div>
+        <div class="field"><label>Address</label><input type="text" placeholder="House no., street, area"></div>
+        <div class="field-row">
+          <div class="field"><label>City</label><input type="text" placeholder="Jaipur"></div>
+          <div class="field"><label>PIN Code</label><input type="text" placeholder="302017"></div>
+        </div>
+        <div class="field"><label>Phone</label><input type="tel" placeholder="+91 98765 43210"></div>
+
+        <h3 style="font-size:1.3rem; margin:2rem 0 1.4rem;">Payment Method</h3>
+        <div class="field"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456"></div>
+        <div class="field-row">
+          <div class="field"><label>Expiry</label><input type="text" placeholder="MM / YY"></div>
+          <div class="field"><label>CVV</label><input type="text" placeholder="•••"></div>
+        </div>
+
+        <a href="order-tracking.html" class="btn btn-primary btn-block mt-2">Place Order <span class="arrow">→</span></a>
+      </div>
+
+      <div class="order-summary reveal-right d-2">
+        <h3 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:1.2rem;">Order Summary</h3>
+        <div class="summary-row"><span>Nordic Lounge Chair</span><span>₹14,999</span></div>
+        <div class="summary-row"><span>Oakwood Three-Seater Sofa</span><span>₹58,499</span></div>
+        <div class="summary-row"><span>Ember Coffee Table ×2</span><span>₹27,198</span></div>
+        <hr class="divider" style="margin:0.8rem 0;">
+        <div class="summary-row"><span>Delivery</span><span>Free</span></div>
+        <div class="summary-row"><span>Tax</span><span>₹5,035</span></div>
+        <div class="summary-row total"><span>Total</span><span>₹1,05,731</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="brand">WOOD<span>ORA</span></a><p>Furniture that defines your space — solid wood pieces crafted for the way you actually live.</p></div>
+      <div class="footer-col"><h5>Shop</h5><a href="shop.html">All Furniture</a><a href="sofas.html">Sofas</a><a href="dining.html">Dining</a><a href="collections.html">Collections</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a><a href="order-tracking.html">Track Order</a><a href="account.html">My Account</a></div>
+      <div class="footer-col"><h5>Support</h5><a href="contact.html">Help Center</a><a href="checkout.html">Shipping</a><a href="cart.html">Returns</a><a href="contact.html">Emergency Support</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 WOODORA. All rights reserved.</span><span>Made with care, in wood and code.</span></div>
+  </div>
+</footer>
+
+</body>
+</html>

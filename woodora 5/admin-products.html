@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — WOODORA Admin</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .prod-thumb { width:42px; height:42px; border-radius: var(--radius-s); object-fit:cover; }
+  .prod-cell { display:flex; align-items:center; gap:0.8rem; }
+</style>
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">◆ Dashboard</a>
+      <a href="admin-products.html" class="active">▤ Products</a>
+      <a href="admin-orders.html">▥ Orders</a>
+      <a href="admin-customers.html">◈ Customers</a>
+      <a href="admin-inventory.html">▦ Inventory</a>
+      <a href="admin-categories.html">▧ Categories</a>
+      <a href="admin-collections.html">▨ Collections</a>
+      <a href="admin-reviews.html">★ Reviews</a>
+      <a href="admin-content.html">✎ Content</a>
+      <a href="admin-analytics.html">▲ Analytics</a>
+      <a href="admin-settings.html">⚙ Settings</a>
+      <a href="admin-login.html">↩ Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>Products</h1>
+      <a href="admin-add-product.html" class="btn btn-primary btn-small">+ Add Product</a>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-chip active">All (128)</button>
+      <button class="filter-chip">Sofas</button>
+      <button class="filter-chip">Beds</button>
+      <button class="filter-chip">Dining</button>
+      <button class="filter-chip">Low Stock</button>
+    </div>
+
+    <div class="admin-panel" style="animation-delay:0s;">
+      <table class="admin-table">
+        <thead><tr><th>Product</th><th>SKU</th><th>Category</th><th>Price</th><th>Stock</th><th>Status</th><th></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><div class="prod-cell"><img class="prod-thumb" src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?q=80&w=100&auto=format&fit=crop" alt="">Nordic Lounge Chair</div></td>
+            <td>WD-CH-1042</td><td>Chairs</td><td>₹14,999</td><td>42</td>
+            <td><span class="status-pill paid">Active</span></td>
+            <td class="table-actions"><a href="product.html">View</a><a href="admin-add-product.html">Edit</a><a href="#">Delete</a></td>
+          </tr>
+          <tr>
+            <td><div class="prod-cell"><img class="prod-thumb" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=100&auto=format&fit=crop" alt="">Oakwood Three-Seater Sofa</div></td>
+            <td>WD-SF-2210</td><td>Sofas</td><td>₹58,499</td><td>18</td>
+            <td><span class="status-pill paid">Active</span></td>
+            <td class="table-actions"><a href="product.html">View</a><a href="admin-add-product.html">Edit</a><a href="#">Delete</a></td>
+          </tr>
+          <tr>
+            <td><div class="prod-cell"><img class="prod-thumb" src="https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?q=80&w=100&auto=format&fit=crop" alt="">Solstice Dining Table</div></td>
+            <td>WD-DT-3305</td><td>Dining</td><td>₹37,800</td><td>6</td>
+            <td><span class="status-pill low">Low Stock</span></td>
+            <td class="table-actions"><a href="product.html">View</a><a href="admin-add-product.html">Edit</a><a href="#">Delete</a></td>
+          </tr>
+          <tr>
+            <td><div class="prod-cell"><img class="prod-thumb" src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=100&auto=format&fit=crop" alt="">Alder Platform Bed</div></td>
+            <td>WD-BD-4110</td><td>Beds</td><td>₹64,999</td><td>24</td>
+            <td><span class="status-pill paid">Active</span></td>
+            <td class="table-actions"><a href="product.html">View</a><a href="admin-add-product.html">Edit</a><a href="#">Delete</a></td>
+          </tr>
+          <tr>
+            <td><div class="prod-cell"><img class="prod-thumb" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=100&auto=format&fit=crop" alt="">Camden Three-Door Wardrobe</div></td>
+            <td>WD-WD-5027</td><td>Wardrobes</td><td>₹49,999</td><td>0</td>
+            <td><span class="status-pill low">Out of Stock</span></td>
+            <td class="table-actions"><a href="product.html">View</a><a href="admin-add-product.html">Edit</a><a href="#">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Product — WOODORA Admin</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+  .form-row-split2 { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  @media (max-width:700px){ .form-row-split2{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body class="admin-body">
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <a href="index.html" class="brand">WOOD<span>ORA</span></a>
+    <nav class="admin-nav">
+      <a href="admin-dashboard.html">◆ Dashboard</a>
+      <a href="admin-products.html" class="active">▤ Products</a>
+      <a href="admin-orders.html">▥ Orders</a>
+      <a href="admin-customers.html">◈ Customers</a>
+      <a href="admin-inventory.html">▦ Inventory</a>
+      <a href="admin-categories.html">▧ Categories</a>
+      <a href="admin-collections.html">▨ Collections</a>
+      <a href="admin-reviews.html">★ Reviews</a>
+      <a href="admin-content.html">✎ Content</a>
+      <a href="admin-analytics.html">▲ Analytics</a>
+      <a href="admin-settings.html">⚙ Settings</a>
+      <a href="admin-login.html">↩ Logout</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <h1>Add Product</h1>
+      <a href="admin-products.html" class="btn btn-outline btn-small">← Back to Products</a>
+    </div>
+
+    <div class="admin-panel" style="animation-delay:0s;">
+      <h3>Product Details</h3>
+      <div class="form-row-split2">
+        <div class="field"><label>Product Name</label><input type="text" placeholder="Nordic Lounge Chair"></div>
+        <div class="field"><label>SKU</label><input type="text" placeholder="WD-CH-1042"></div>
+      </div>
+      <div class="form-row-split2">
+        <div class="field"><label>Category</label><select><option>Sofas</option><option>Beds</option><option>Dining</option><option>Chairs</option><option>Tables</option><option>Wardrobes</option><option>Office</option><option>Decor</option></select></div>
+        <div class="field"><label>Collection</label><select><option>None</option><option>The Earth Collection</option><option>The Monochrome Line</option><option>The Coastal Edit</option></select></div>
+      </div>
+      <div class="form-row-split2">
+        <div class="field"><label>Price (₹)</label><input type="number" placeholder="14999"></div>
+        <div class="field"><label>Stock Quantity</label><input type="number" placeholder="42"></div>
+      </div>
+      <div class="field"><label>Description</label><textarea rows="4" placeholder="Solid ash-wood frame with hand-upholstered bouclé seat..."></textarea></div>
+      <div class="field"><label>Product Images</label><input type="file" multiple></div>
+      <button class="btn btn-primary">Save Product <span class="arrow">→</span></button>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>
