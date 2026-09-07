@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="WOODORA">
+  <title>WOODORA</title>
+  <rect width="100" height="100" fill="#1B1511"/>
+  <path d="M28 39 L40 70 L50 46 L60 70 L72 39"
+        fill="none" stroke="#C8A477" stroke-width="7"
+        stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>
